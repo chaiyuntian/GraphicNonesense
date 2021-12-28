@@ -4,9 +4,14 @@
 Original Code from 
 https://www.iquilezles.org/www/articles/texturerepetition/texturerepetition.htm
 
+
+```
 // input float2 uv
+
 // input Texture Object inTex
+
 // input float blendRatio
+
 
  struct Functions
  {
@@ -58,3 +63,5 @@ float2 b = smoothstep(blendRatio, 1.0 - blendRatio, fuv);
 
 return lerp(lerp(Texture2DSampleGrad(inTex, inTexSampler, uva, dxa, dya), Texture2DSampleGrad(inTex, inTexSampler, uvb, dxb, dyb), b.x),
 		   lerp(Texture2DSampleGrad(inTex, inTexSampler, uvc, dxc, dyc), Texture2DSampleGrad(inTex, inTexSampler, uvd, dxd, dyd), b.x), b.y);
+
+```
